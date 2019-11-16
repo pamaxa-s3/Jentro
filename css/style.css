@@ -1,3 +1,23 @@
+/* font-family: 'Bebas'; */
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/Bebas/Bebas.woff2') format('woff2'),
+        url('../fonts/Bebas/Bebas.woff') format('woff'),
+        url('../fonts/Bebas/bebas.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font-family: 'Helvetica Neue'; */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue/HelveticaNeue.woff') format('woff'),
+        url('../fonts/HelveticaNeue/HelveticaNeue.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -37,6 +57,8 @@ body {
     margin: 0 auto;
 }
 
+/* ---Header--- */
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -58,6 +80,10 @@ body {
 
 .header__menu {
     margin-top: 5px;
+}
+
+.header__menu .active a {
+    color: #e8603c;
 }
 
 .header__menu li+li {
@@ -91,11 +117,31 @@ body {
     z-index: -1;
 }
 
-
 .slider__inner {
     margin: 0 -10px;
     border-left: 10px solid #fcfcfc;
     border-right: 10px solid #fcfcfc;
+}
+
+.slick-arrow::before {
+    display: none;
+}
+
+.slick-arrow img {
+    height: 52px;
+    width: 36px;
+}
+
+.slick-prev {
+    top: 157px;
+    left: 26px;
+    z-index: 1;
+}
+
+.slick-next {
+    top: 157px;
+    right: 38px;
+    z-index: 1;
 }
 
 .slider__item {
@@ -150,6 +196,7 @@ body {
 .slider-6 {
     background-image: url(../images/slider/img-6.jpg);
 }
+
 .slider__nav-item:hover {
     cursor: pointer;
 }
@@ -164,7 +211,242 @@ body {
     outline: none;
 }
 
-.slider__nav .slick-slide + .slick-slide {
- margin-left: 20px;
+.slider__nav .slick-slide+.slick-slide {
+    margin-left: 20px;
 }
 
+/*---Portfolio---*/
+
+.portfolio {
+    padding: 39px 0 45px;
+}
+
+.portfolio__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__item {
+    width: 280px;
+}
+
+.portfolio__item-title {
+    font-family: 'Bebas', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #e8663c;
+    text-transform: uppercase;
+    padding-left: 70px;
+    position: relative;
+}
+
+.title-items::before {
+    content: '';
+    background-image: url(../images/portfolio/gear.svg);
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    width: 46px;
+    height: 46px;
+}
+
+.title-work::before {
+    content: '';
+    background-image: url(../images/portfolio/check.svg);
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 49px;
+    height: 41px;
+}
+
+.title-social::before {
+    content: '';
+    background-image: url(../images/portfolio/persone.svg);
+    position: absolute;
+    bottom: 4px;
+    left: 2px;
+    width: 42px;
+    height: 40px;
+}
+
+.portfolio__item-text {
+    line-height: 18px;
+    color: #414141;
+    padding: 34px 0 20px;
+}
+
+.portfolio__item-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8663c;
+    color: #fff;
+    text-transform: uppercase;
+    width: 56px;
+    height: 31px;
+    transition: all .2s;
+}
+
+.portfolio__item-link a:hover {
+    transform: scale(1.1);
+}
+
+/*--- Works--- */
+
+.works {
+    margin-bottom: 48px;
+}
+
+.works__title {
+    font-family: 'Bebas', sans-serif;
+    font-size: 18px;
+    color: #e8603c;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.works__title::after {
+    content: '';
+    background-image: url(../images/works/line.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 807px;
+    height: 19px;
+}
+
+.works__slider-item {
+    padding-right: 20px;
+    line-height: 18px;
+    font-family: 'Bebas', sans-serif;
+    text-transform: uppercase;
+    width: 220px;
+}
+
+.works__slider-photo {
+    height: 184px;
+}
+
+.works__slider-content {
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    padding-left: 13px;
+    width: 220px;
+}
+
+.works__slider-title {
+    font-size: 16px;
+    color: #b9b9b9;
+    padding-top: 13px;
+    padding-bottom: 7px;
+}
+
+.works__slider-date {
+    font-size: 11px;
+    color: #e8663c;
+    padding-bottom: 15px;
+}
+
+/* ---Footer--- */
+
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    background-color: rgba(232, 96, 60, .5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 41px 31px 35px;
+    background-color: #e8663c;
+    margin: 0 -10px;
+    border-left: 10px solid #fcfcfc;
+    border-right: 10px solid #fcfcfc;
+}
+
+.footer__item-title {
+    font-family: 'Bebas', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.footer__item-text {
+    font-size: 12px;
+    color: #fff;
+    line-height: 14px;
+}
+
+.footer__item-text span a {
+    font-weight: 300;
+    color: #f3b29d;
+    transition: all .3s;
+}
+
+.footer__item-text span a:hover {
+    color: #eed6ce;
+}
+
+.footer__time-ago {
+    color: #f3b29d;
+    margin-top: 8px;
+    margin-bottom: 19px;
+}
+
+.footer__about-jetro {
+    width: 267px;
+}
+
+.footer__twitter-widget {
+    width: 225px;
+}
+
+.footer__contact {
+    width: 260px;
+}
+
+.footer__twitter-widget--bottom {
+    margin-top: 21px;
+}
+
+.footer__phone {
+    margin-bottom: 20px;
+}
+
+.footer__phone a {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    transition: all .3s;
+}
+
+.footer__phone a:hover {
+    color: #eed6ce;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer__social li {
+    padding-right: 5px;
+    transition: all .2s;
+}
+
+.footer__social li:hover {
+    transform: scale(1.15);
+}
