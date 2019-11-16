@@ -277,6 +277,7 @@ body {
 }
 
 .portfolio__item-link a {
+    font-family: 'Bebas', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
