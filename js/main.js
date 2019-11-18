@@ -21,12 +21,4 @@ $(function () {
   });
 
 
-  $('.works__slider-inner').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    variableWidth: true,
-    focusOnSelect: true,
-  });
-
-
 });
