@@ -92,12 +92,12 @@ body {
     margin-top: 5px;
 }
 
-.header__menu .active a,
+.header__menu li.active a,
 .header__menu a:hover {
     color: #e8603c;
 }
 
-.header__menu li+li {
+.header__menu li + li {
     margin-left: 25px;
 }
 
@@ -105,6 +105,54 @@ body {
     font-size: 16px;
     color: #b9b9b9;
     transition: all .3s linear;
+}
+
+.burger {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    display: none;
+}
+
+.burger__line {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    transition: all .4s linear;
+}
+
+.burger__line-first {
+    top: 0;
+}
+
+.burger__line-second,
+.burger__line-third {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger__line-fourth {
+    bottom: 0;
+}
+
+.burger_active .burger__line-first,
+.burger_active .burger__line-fourth {
+opacity: 0;
+}
+
+.burger_active .burger__line-second {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #e8603c;
+}
+
+.burger_active .burger__line-third {
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: #e8603c;
 }
 
 /* ----Slider---- */
@@ -222,6 +270,7 @@ body {
 .portfolio__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .portfolio__item {
@@ -300,6 +349,7 @@ body {
 .works__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .works__item {
@@ -307,7 +357,7 @@ body {
     line-height: 18px;
     font-family: 'Bebas', sans-serif;
     text-transform: uppercase;
-    width: 220px;
+    max-width: 220px;
 }
 
 .works__item-photo {
@@ -388,10 +438,6 @@ body {
     overflow: hidden;
 }
 
-.footer__inner {
-    position: relative;
-}
-
 .footer__inner::before,
 .footer__inner::after {
     height: 100%;
@@ -399,10 +445,12 @@ body {
 
 .footer__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 39px 41px 31px 35px;
     background-color: #e8663c;
     margin: 0 -10px;
+    position: relative;
 }
 
 .footer__item-title {
