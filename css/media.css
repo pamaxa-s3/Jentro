@@ -1,20 +1,39 @@
 @media(max-width: 991px) {
 
+    .works {
+        margin: 0;
+    }
+
     .works__wrapper {
         width: 50%;
         display: flex;
         justify-content: center;
-        padding-right: 10px;
     }
 
     .works__item {
         width: 100%;
         margin-bottom: 20px;
+        max-width: none;
+    }
+
+    .works__wrapper {
+        padding: 0 10px;
     }
 
     .works__item+.works__item {
         margin-left: 0;
         padding-left: 10px;
+    }
+
+    .works__item-photo a {
+        display: block;
+    }
+
+    .works__item-content,
+    .works__item-photo,
+    .works__item-photo img {
+        width: 100%;
+        height: auto;
     }
 
 }
@@ -30,6 +49,10 @@
     .slider__nav .slick-slide+.slick-slide {
         margin: 0;
     }
+
+    .footer__inner {
+        padding-bottom: 0;
+    }
 }
 
 @media(max-width: 770px) {
@@ -41,6 +64,20 @@
 
     .works {
         margin-top: -15px;
+    }
+
+    .slider__nav {
+        display: none;
+    }
+
+    .footer__about-jetro {
+        width: 100%;
+    }
+
+    .footer__twitter-widget,
+    .footer__contact {
+        margin-left: 0;
+        width: 50%;
     }
 }
 
@@ -79,16 +116,19 @@
     }
 
     .slick-arrow img {
-        height: 36px;
-        width: 22px;
+        display: none;
     }
 
     .slider__item-content {
-        width: 80%;
         left: 0;
-        right: 0;
-        margin: 0 auto;
-        padding: 18px 15px 10px;
+        
+        width: 100%;
+    }
+
+    .slider__item-content {
+        width: 100%;
+        left: 0;
+        bottom: 0;
     }
 
     .slider__item-text {
