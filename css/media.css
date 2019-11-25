@@ -83,7 +83,7 @@
 
 
 @media(max-width: 575px) {
-    
+
     .header__menu ul {
         display: none;
         background-color: #fcfcfc;
@@ -96,7 +96,7 @@
     }
 
     .header__menu li,
-    .header__menu li + li {
+    .header__menu li+li {
         display: block;
         text-align: center;
         margin-left: 0;
@@ -107,7 +107,7 @@
         margin-bottom: 20px;
     }
 
-    .burger {
+    .header__menu-btn {
         display: block;
     }
 
@@ -121,7 +121,7 @@
 
     .slider__item-content {
         left: 0;
-        
+
         width: 100%;
     }
 
@@ -141,7 +141,10 @@
         font-size: 14px;
     }
 
-    .portfolio__item-link a {
+    .portfolio__item-link {
+        font-size: 16px;
+        width: 120px;
+        height: 44px;
         margin: 0 auto;
     }
 
